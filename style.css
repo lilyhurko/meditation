@@ -1,0 +1,160 @@
+.bg-light {
+    background-color: #c49e85 !important;
+}
+
+.navbar-brand {
+    display: flex;
+    padding: 0;
+}
+
+.container {
+    margin: 10px;
+}
+
+.navbar-brand h1 {
+    font-family: "Elsie", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 20px;
+    color: #292F36;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.nav-item {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.btn-book {
+    position: absolute;
+    right: 10px;
+    background-color: #c49e85;
+    border-color: #292F36;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    color: #292F36;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.btn-book:hover {
+    background-color: #292F36;
+    border-color: #292F36;
+}
+
+.carousel-item:nth-child(1) {
+    background-color: #c49e85; 
+}
+
+.carousel-item:nth-child(2) {
+    background-color: #c49e85;
+}
+
+.carousel-item:nth-child(3) {
+    background-color: #c49e85;
+}
+
+.carousel-item .text-light {
+    color: #f8f9fa;
+}
+
+.carousel-item .text-dark {
+    color: #343a40;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.circles-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.circle {
+    border-radius: 50%;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.circle:nth-child(1) {
+    margin-right: -20px;
+}
+
+.circle:nth-child(2) {
+    margin-right: -20px;
+}
+
+.bg-primary {
+    background-image: url('images/circle1.jpg');
+    width: 105px;
+    height: 105px;
+}
+
+.bg-secondary {
+    background-image: url('images/circle2.jpg');
+    width: 105px;
+    height: 105px; 
+}
+
+
+.circle-btn {
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #292F36 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    width: 480px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.header-container {
+    width: 380px;
+}
+.text-small {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.text-header {
+    font-family: "Elsie", sans-serif;
+    font-size: 60px;
+}
