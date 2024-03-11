@@ -1,5 +1,5 @@
 .bg-light {
-    background-color: #c49e85 !important;
+    background-color: white !important;
 }
 
 .navbar-brand {
@@ -9,6 +9,7 @@
 
 .container {
     margin: 10px;
+    height: 50px;
 }
 
 .navbar-brand h1 {
@@ -55,106 +56,78 @@
 }
 
 .carousel-item:nth-child(1) {
-    background-color: #c49e85; 
-}
-
-.carousel-item:nth-child(2) {
-    background-color: #c49e85;
-}
-
-.carousel-item:nth-child(3) {
-    background-color: #c49e85;
-}
-
-.carousel-item .text-light {
-    color: #f8f9fa;
-}
-
-.carousel-item .text-dark {
-    color: #343a40;
-}
-
-.carousel-item {
-    height: 500px;
-}
-
-.circles-container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.circle {
-    border-radius: 50%;
-    margin: 0;
+    min-height: 900px;
+    background-image: url('images/bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.circle:nth-child(1) {
-    margin-right: -20px;
+.carousel-item:nth-child(2) {
+    min-height: 900px;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.circle:nth-child(2) {
-    margin-right: -20px;
-}
-
-.bg-primary {
-    background-image: url('images/circle1.jpg');
-    width: 105px;
-    height: 105px;
-}
-
-.bg-secondary {
-    background-image: url('images/circle2.jpg');
-    width: 105px;
-    height: 105px; 
-}
-
-
-.circle-btn {
-    display: inline-block;
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    position: relative;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-    background-color: #292F36 !important;
-    position: relative;
-    overflow: hidden;
-}
-
-.circle-btn span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: #fff;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.text-container {
-    width: 480px;
-    margin-top: 20px;
-    margin-left: 10px;
+.carousel-item:nth-child(3) {
+    min-height: 900px;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .header-container {
-    width: 380px;
-}
-.text-small {
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    line-height: 2;
+    width: 750px;
+    margin-left: 25%;
+    margin-top: 25px;
+    text-align: center;
 }
 
 .text-header {
     font-family: "Elsie", sans-serif;
     font-size: 60px;
+    color: white;
 }
+
+.text-small-container {
+    width: 950px;
+    margin-left: 18%;
+    text-align: center;
+}
+
+.text-small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.image-carousel1 {
+    margin-left: 40%;
+    align-items: center;
+}
+
+.carousel1 {
+    height: 280px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.btn-start {
+    width: 180px;
+    height: 50px;
+    background-color: #259385;
+    border-radius: 30px;
+    border-color: #259385;
+    margin-left: 44%;
+    margin-top: 25px;
+}
+
+.btn-start:hover {
+    background-color: white;
+    border-color: white;
+    color: #259385
+}
+
+
+
+  
+  
