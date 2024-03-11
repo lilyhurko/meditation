@@ -124,8 +124,42 @@
 .btn-start:hover {
     background-color: white;
     border-color: white;
-    color: #259385
+    color: #259385;
 }
+
+.container-points {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container-points .col {
+    display: inline-block;
+    margin: 0 100px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.point {
+    height: 100px;
+}
+
+.btn-point {
+    width: 150px;
+    height: 40px;
+    background-color: #259385;
+    border-radius: 30px;
+    border-color: #259385;
+}
+
+.btn-point:hover {
+    background-color: #292F36;
+    border-color: #292F36;
+    color: white;
+}
+
+
 
 
 
