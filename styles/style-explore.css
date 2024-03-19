@@ -1,0 +1,294 @@
+.bg-light {
+    background-color: white !important;
+}
+
+.navbar-brand {
+    display: flex;
+    padding: 0;
+}
+
+.container {
+    margin: 10px;
+    height: 50px;
+}
+
+.navbar-brand h1 {
+    font-family: "Elsie", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 20px;
+    color: #292F36;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.nav-item {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.btn-book {
+    position: absolute;
+    right: 10px;
+    background-color: #c49e85;
+    border-color: #292F36;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    color: #292F36;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.btn-book:hover {
+    background-color: #292F36;
+    border-color: #292F36;
+}
+
+.carousel-item:nth-child(1) {
+    min-height: 900px;
+    background-image: url('../images/home/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item:nth-child(2) {
+    min-height: 900px;
+    background-image: url('../images/home/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item:nth-child(3) {
+    min-height: 900px;
+    background-image: url('../images/home/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    width: 750px;
+    margin-left: 25%;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.text-header {
+    font-family: "Elsie", sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+.text-small-container {
+    width: 950px;
+    margin-left: 18%;
+    text-align: center;
+}
+
+.text-small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.image-carousel1 {
+    margin-left: 40%;
+    align-items: center;
+}
+
+.carousel1 {
+    height: 280px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.btn-start {
+    width: 180px;
+    height: 50px;
+    background-color: #259385;
+    border-radius: 30px;
+    border-color: #259385;
+    margin-left: 44%;
+    margin-top: 25px;
+}
+
+.btn-start:hover {
+    background-color: white;
+    border-color: white;
+    color: #259385;
+}
+
+.container-yoga {
+    margin-top: 30px;
+}
+
+.yoga-header,
+.meditation-header {
+    width: 500px;
+    margin-left: 35%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.yoga-head,
+.meditation-head {
+    font-family: 'Elsie', sans-serif;
+    font-size: 43px;
+    color: #292F36;
+}
+
+.yoga-text,
+.meditation-text {
+    width: 800px;
+    margin-left: 26%;
+    text-align: center;
+}
+
+.yoga-description,
+.meditation-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.contain-yoga,
+.contain-meditation {
+    margin-left: 10%;
+}
+
+.custom-card-yoga {
+    width: 90%;
+    height: 190px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #2dae9d, #ffffff); 
+    border: 2px solid;
+    border-image: linear-gradient(to right, #2dae9d, #ffffff);
+    border-image-slice: 1;
+}
+
+.card-body {
+    margin-top: 7px;
+}
+
+.wind-header,
+.stress-header,
+.self-header {
+    margin-top: 0;
+    font-family: 'Elsie', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.wind-text,
+.stress-text,
+.self-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.custom-carousel {
+    width: 580px;
+    height: 700px;
+    margin-top: 50px;
+}
+
+.custom-carousel .carousel-item {
+    transition: transform 0.5s ease;
+    background-image: none;
+}
+
+.custom-carousel .carousel-inner {
+    overflow: hidden;
+}
+
+.prenatal {
+    width: 550px;
+    height: 530px;
+}
+
+.therapy,
+.hatha {
+    width: 540px;
+    height: 510px;
+}
+
+.custom-card-meditation {
+    width: 90%;
+    height: 190px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to left, #2dae9d, #ffffff); 
+    border: 2px solid;
+    border-image: linear-gradient(to left, #2dae9d, #ffffff);
+    border-image-slice: 1;
+}
+
+.card-body-yoga {
+    margin-top: 7px;
+    text-align: end;
+}
+
+.col-md-6 {
+    height: 700px !important;
+}
+
+.mindfullness {
+    width: 620px;
+    height:500px;
+}
+
+.footer {
+    background-image: url('../images/home/bg-footer.jpg');
+    background-size: cover;
+    height: 35vh;
+    padding: 20px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+}
