@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style-meditation.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/home/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="bookBtn" class="btn btn-primary btn-book">Book Now</button>
+        </div>
+    </nav>
+
+    <div class="center-content">
+        <h2 class="yoga-head">Learn More About Meditation</h2>
+        <p class="yoga-description">This page provides comprehensive insights into various meditation techniques, benefits, and practices, empowering individuals to explore and deepen their understanding of this transformative tool for mental, emotional, and spiritual well-being. Delve into the rich world of meditation to discover its profound effects on stress reduction, focus enhancement, and overall life satisfaction.</p>
+    </div>
+
+    <div class="container-meditation">
+        <div class="contain-meditation">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card custom-card-left">
+                        <div class="card-body">
+                            <h3 class="self-header">Self-love</h3>
+                            <p class="self-text">Self-love Meditation guides individuals through a nurturing practice focused on cultivating compassion, acceptance, and kindness towards oneself, fostering inner healing and emotional well-being.</p>
+                            <button id="selfLoveButton" class="btn btn-primary" onclick="toggleVideo('selfLove')">Watch Video</button>
+                            <button id="closeselfLoveButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('selfLove')">Close Video</button>
+                            <div id="selfLoveContainer"></div>
+                        </div>
+                    </div>
+                    <div class="card custom-card-left">
+                        <div class="card-body">
+                            <h3 class="sleep-header">Sleep</h3>
+                            <p class="sleep-text">Sleep Meditation offers soothing guided practices designed to promote relaxation, ease insomnia, and improve the quality of sleep, helping individuals achieve restorative rest and rejuvenation.</p>
+                            <button id="sleepButton" class="btn btn-primary" onclick="toggleVideo('sleep')">Watch Video</button>
+                            <button id="closeSleepButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('sleep')">Close Video</button>
+                            <div id="sleepContainer"></div>
+                        </div>
+                    </div>
+                    <div class="card custom-card-left">
+                        <div class="card-body">
+                            <h3 class="motivation-header">Motivation</h3>
+                            <p class="motivation-text">Motivation Meditation combines mindfulness techniques with motivational affirmations to inspire and energize individuals, empowering them to pursue their goals with clarity and determination.</p>
+                            <button id="motivationButton" class="btn btn-primary" onclick="toggleVideo('motivation')">Watch Video</button>
+                            <button id="closeMotivationButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('motivation')">Close Video</button>
+                            <div id="motivationContainer"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <img src="../images/home/meditation.png" alt="Image" class="meditation">
+                </div>
+                <div class="col-md-4">
+                    <div class="card custom-card-right">
+                        <div class="card-body">
+                            <h3 class="self-header">Overthinking</h3>
+                            <p class="self-text">Overthinking Meditation offers guided practices to help individuals quiet their minds, cultivate present-moment awareness, and break free from the cycle of repetitive thoughts, promoting inner peace and mental clarity.</p>
+                            <button id="overthinkingButton" class="btn btn-primary" onclick="toggleVideo('overthinking')">Watch Video</button>
+                            <button id="closeOverthinkingButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('overthinking')">Close Video</button>
+                            <div id="overthinkingContainer"></div>
+                        </div>
+                    </div>
+                    <div class="card custom-card-right">
+                        <div class="card-body">
+                            <h3 class="sleep-header">Self-Forgiveness</h3>
+                            <p class="sleep-text">Self-Forgiveness Meditation facilitates a healing process by guiding individuals to release self-judgment, cultivate self-compassion, and embrace forgiveness towards themselves.</p>
+                            <button id="selfforgivenessButton" class="btn btn-primary" onclick="toggleVideo('selfforgiveness')">Watch Video</button>
+                            <button id="closeSelfforgivenessButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('selfforgiveness')">Close Video</button>
+                            <div id="selfforgivenessContainer"></div>
+                        </div>
+                    </div>
+                    <div class="card custom-card-right">
+                        <div class="card-body">
+                            <h3 class="motivation-header">Morning Energy</h3>
+                            <p class="motivation-text">Morning Energy Meditation invigorates individuals with uplifting practices designed to awaken the senses, boost vitality, and set a positive tone for the day ahead, enhancing energy levels and promoting mental clarity.</p>
+                            <button id="morningButton" class="btn btn-primary" onclick="toggleVideo('morning')">Watch Video</button>
+                            <button id="closeMorningButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('morning')">Close Video</button>
+                            <div id="morningContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="../images/home/logo.png" alt="Logo">
+        </div>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../images/home/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../images/home/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
