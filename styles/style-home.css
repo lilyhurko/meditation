@@ -2,14 +2,14 @@
     background-color: white !important;
 }
 
-.navbar-brand {
-    display: flex;
-    padding: 0;
-}
-
 .container {
     margin: 10px;
     height: 50px;
+}
+
+.navbar-brand {
+    display: flex;
+    padding: 0;
 }
 
 .navbar-brand h1 {
@@ -27,6 +27,7 @@
     height: auto;
     margin: 0;
     padding-right: 10px;
+    margin-left: 20px;
 }
 
 .nav-item {
@@ -38,12 +39,12 @@
 .btn-book {
     position: absolute;
     right: 10px;
-    background-color: #c49e85;
-    border-color: #292F36;
+    background-color: #259385;
+    border-color: #259385;
     width: 120px;
     height: 40px;
     border-radius: 30px;
-    color: #292F36;
+    color: #fff;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -79,7 +80,7 @@
 .header-container {
     width: 750px;
     margin-left: 25%;
-    margin-top: 25px;
+    margin-top: 90px;
     text-align: center;
 }
 
@@ -412,13 +413,23 @@
     color: #292F36;
 }
 
-.custom-card-meditation {
+.custom-card-left {
     height: 160px;
     width: 450px;
     margin-bottom: 15%;
     background: linear-gradient(to right, #C3EEE8, #ffffff);
     border: 2px solid;
     border-image: linear-gradient(to right, #259385, #ffffff);
+    border-image-slice: 1;
+}
+
+.custom-card-right {
+    height: 160px;
+    width: 450px;
+    margin-bottom: 15%;
+    background: linear-gradient(to left, #C3EEE8, #ffffff);
+    border: 2px solid;
+    border-image: linear-gradient(to left, #259385, #ffffff);
     border-image-slice: 1;
 }
 
@@ -527,7 +538,24 @@
     margin-right: 10%;
 }
 
-.btn-transform {
+.btn-antistress {
+    width: 150px;
+    border-radius: 15px;
+    background-color: #259385;
+    border-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #292F36;
+    margin-left: 70%;
+}
+
+.btn-antistress:hover {
+    background-color: #292F36;
+    border-color: #292F36;
+    color: #fff;
+}
+
+.btn-beginner {
     width: 150px;
     border-radius: 15px;
     background-color: #259385;
@@ -537,7 +565,7 @@
     color: #292F36;
 }
 
-.btn-transform:hover {
+.btn-beginner:hover {
     background-color: #292F36;
     border-color: #292F36;
     color: #fff;

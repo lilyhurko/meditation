@@ -27,6 +27,7 @@
     height: auto;
     margin: 0;
     padding-right: 10px;
+    margin-left: 20px;
 }
 
 .nav-item {
@@ -38,8 +39,8 @@
 .btn-book {
     position: absolute;
     right: 10px;
-    background-color: #c49e85;
-    border-color: #292F36;
+    background-color: #259385;
+    border-color: #259385;
     width: 120px;
     height: 40px;
     border-radius: 30px;

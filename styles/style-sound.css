@@ -1,0 +1,208 @@
+.bg-light {
+    background-color: white !important;
+}
+
+.navbar-brand {
+    display: flex;
+    padding: 0;
+}
+
+.navbar-brand h1 {
+    font-family: "Elsie", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 20px;
+    color: #292F36;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: auto;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.nav-item {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.btn-book {
+    position: absolute;
+    right: 10px;
+    background-color: #c49e85;
+    border-color: #292F36;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    color: #292F36;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.btn-book:hover {
+    background-color: #292F36;
+    border-color: #292F36;
+}
+
+.center-content {
+    width: 700px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 27%;
+}
+
+.yoga-head {
+    font-family: 'Elsie', sans-serif;
+    font-size: 43px;
+    color: #292F36;
+}
+
+.yoga-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.text-small-container {
+    width: 950px;
+    margin-left: 18%;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-body {
+    margin-top: 7px;
+}
+
+.self-header,
+.sleep-header,
+.motivation-header {
+    margin-top: 0;
+    font-family: 'Elsie', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.self-text,
+.sleep-text,
+.motivation-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.container-yoga {
+    background-image: url('../images/home/bg-meditation.jpg');
+    background-size: cover;
+    height: 143vh;
+    padding: 50px;
+}
+
+.contain-yoga {
+    margin-top: 3%;
+    margin-left: 12px;
+}
+
+.custom-card-left {
+    height: 225px;
+    width: 450px;
+    margin-bottom: 15%;
+    background: linear-gradient(to right, #C3EEE8, #ffffff);
+    border: 2px solid;
+    border-image: linear-gradient(to right, #259385, #ffffff);
+    border-image-slice: 1;
+}
+
+.custom-card-right {
+    height: 225px;
+    width: 450px;
+    margin-bottom: 15%;
+    background: linear-gradient(to left, #C3EEE8, #ffffff);
+    border: 2px solid;
+    border-image: linear-gradient(to left, #259385, #ffffff);
+    border-image-slice: 1;
+}
+
+.btn-primary {
+    background-color: #259385;
+    border-color: #259385;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #259385;
+    border-color: #259385;
+}
+
+.btn-secondary {
+    background-color: #259385;
+    border-color: #259385;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #259385;
+    border-color: #259385;
+}
+
+.meditation {
+    width: 310px;
+    height: 700px;
+    margin-top: 0%;
+    margin-left: 55px;
+}
+
+.footer {
+    background-image: url('../images/home/bg-footer.jpg');
+    background-size: cover;
+    height: 35vh;
+    padding: 20px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-top: 50px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style-register.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../images/home/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="bookBtn" class="btn btn-primary btn-book" onclick="window.location.href = 'pages/appointment.html';">Book Now</button>
+        </div>
+    </nav>
+
+    <div class="center-content">
+        <h2 class="yoga-head">Register New Account</h2>
+        <p class="yoga-description">Our Yoga and Meditation Classes offer a holistic approach to wellness, combining the physical benefits of yoga with the mental clarity of meditation. Join us to nurture your body, calm your mind, and cultivate inner harmony and balance.</p>
+    </div>
+
+    <div class="container-yoga">
+        <div class="contain-yoga">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="registerForm" class="custom-form" action="#" method="POST">
+                        <div class="card custom-card-yoga">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname">Surname</label>
+                                    <input type="text" class="form-control" id="surname" name="surname" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sex">Sex</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sex" id="male" value="male" required>
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sex" id="female" value="female" required>
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age</label>
+                                    <input type="number" class="form-control" id="age" name="age" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="interests">Interests</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="yogaInterest" value="yoga">
+                                        <label class="form-check-label" for="yogaInterest">Yoga</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="meditationInterest" value="meditation">
+                                        <label class="form-check-label" for="meditationInterest">Meditation</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="relaxInterest" value="relax">
+                                        <label class="form-check-label" for="relaxInterest">Relax</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Your Role</label>
+                                    <select class="form-control" id="role" name="role" required>
+                                        <option value="Student">Student</option>
+                                        <option value="Officer">Officer</option>
+                                        <option value="Teacher">Teacher</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-appointment">Register</button>
+                            </div>
+                        </div>
+                    </form>                    
+                </div>
+                
+                <div id="carouselImages2" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item yoga active">
+                            <img src="../images/explore/prenatal-yoga.jpg" class="prenatal-image" alt="Fourth Image">
+                        </div>
+                        <div class="carousel-item yoga">
+                            <img src="../images/explore/yoga-therapy.jpg" class="therapy" alt="Fifth Image">
+                        </div>
+                        <div class="carousel-item yoga ">
+                            <img src="../images/explore/hatha-yoga.jpg" class="hatha" alt="Sixth Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+<div class="footer">
+    <div class="footer-logo">
+        <img src="../images/home/logo.png" alt="Logo">
+    </div>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="classes.html">Classes</a></li>
+        </ul>
+    </div>
+    <div class="footer-social">
+        <a href="#"><img src="../images/home/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/home/instagram.png" alt="Instagram"></a>
+    </div>
+</div>
+
+<script src="../script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
