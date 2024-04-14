@@ -1,61 +1,3 @@
-.bg-light {
-    background-color: white !important;
-}
-
-.navbar-brand {
-    display: flex;
-    padding: 0;
-}
-
-.container {
-    margin: 10px;
-    height: 50px;
-}
-
-.navbar-brand h1 {
-    font-family: "Elsie", sans-serif;
-    font-weight: 400;
-    margin: 0;
-    font-size: 32px;
-    padding: 0;
-    margin-top: 20px;
-    color: #292F36;
-}
-
-.navbar-brand img {
-    width: 100px;
-    height: auto;
-    margin: 0;
-    padding-right: 10px;
-    margin-left: 20px;
-}
-
-.nav-item {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    color: #292F36;
-}
-
-.btn-book {
-    position: absolute;
-    right: 10px;
-    background-color: #259385;
-    border-color: #259385;
-    width: 120px;
-    height: 40px;
-    border-radius: 30px;
-    color: #292F36;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    
-}
-
-.btn-book:hover {
-    background-color: #292F36;
-    border-color: #292F36;
-}
-
 .center-content {
     width: 700px;
     text-align: center;
@@ -64,13 +6,13 @@
     margin-left: 27%;
 }
 
-.yoga-head {
+.breath-head {
     font-family: 'Elsie', sans-serif;
     font-size: 43px;
     color: #292F36;
 }
 
-.yoga-description {
+.breath-description {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     color: #292F36;
@@ -154,5 +96,28 @@
     100% {
         top: 0;
         left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-content {
+        width: 70%;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .breath-head {
+        font-size: 30px;
+    }
+
+    .breath-description {
+        font-size: 14px;
+    }
+
+    .square {
+        margin-top: 0;
     }
 }

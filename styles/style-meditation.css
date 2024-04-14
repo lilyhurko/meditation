@@ -1,55 +1,3 @@
-.bg-light {
-    background-color: white !important;
-}
-
-.navbar-brand {
-    display: flex;
-    padding: 0;
-}
-
-.navbar-brand h1 {
-    font-family: "Elsie", sans-serif;
-    font-weight: 400;
-    margin: 0;
-    font-size: 32px;
-    padding: 0;
-    margin-top: 20px;
-    color: #292F36;
-}
-
-.navbar-brand img {
-    width: 100px;
-    height: auto;
-    margin: 0;
-    padding-right: 10px;
-}
-
-.nav-item {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    color: #292F36;
-}
-
-.btn-book {
-    position: absolute;
-    right: 10px;
-    background-color: #c49e85;
-    border-color: #292F36;
-    width: 120px;
-    height: 40px;
-    border-radius: 30px;
-    color: #292F36;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    
-}
-
-.btn-book:hover {
-    background-color: #292F36;
-    border-color: #292F36;
-}
-
 .center-content {
     width: 700px;
     text-align: center;
@@ -78,27 +26,11 @@
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 50px;
 }
 
 .card-body {
     margin-top: 7px;
-}
-
-.self-header,
-.sleep-header,
-.motivation-header {
-    margin-top: 0;
-    font-family: 'Elsie', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-}
-
-.self-text,
-.sleep-text,
-.motivation-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
 }
 
 .container-meditation {
@@ -106,11 +38,21 @@
     background-size: cover;
     height: 143vh;
     padding: 50px;
+    margin-bottom: 120px;
 }
 
 .contain-meditation {
-    margin-top: 3%;
-    margin-left: 12px;
+    margin-top: 4%;
+    margin-left: 10px;
+}
+
+.left {
+    margin-left: 5%;
+}
+
+.right {
+    margin-left: 60%;
+    margin-top: -856px;
 }
 
 .custom-card-left {
@@ -158,51 +100,65 @@
 }
 
 .meditation {
-    width: 310px;
-    height: 700px;
-    margin-top: 0%;
-    margin-left: 55px;
+    width: 240px;
+    height: 600px;
+    margin-top: 33%;
+    margin-left: 3%;
 }
 
-.footer {
-    background-image: url('../images/home/bg-footer.jpg');
-    background-size: cover;
-    height: 35vh;
-    padding: 20px;
-    text-align: center;
-    margin-top: 7%;
+.card {
+    width: 450px;
+    height: 230px;
 }
 
-.footer-logo img {
-    width: 100px;
-    margin-top: 50px;
+.card-title {
+    font-family: 'Elsie', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
 }
 
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-}
+@media screen and (max-width: 768px) {
+    .center-content {
+        width: 70%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
-.footer-menu li {
-    display: inline-block;
-    margin: 0 10px;
-}
+    .yoga-head {
+        font-size: 30px;
+    }
 
-.footer-menu a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-}
+    .yoga-description {
+        font-size: 14px;
+    }
 
-.footer-social {
-    margin-top: 20px;
-}
+    .container-meditation {
+        background-image: none;
+        margin-top: -80px;
+        margin-left: 6%;
+    }
 
-.footer-social a {
-    margin: 0 10px;
-}
+    .meditation {
+        display: none;
+    }
 
-.footer-social img {
-    width: 50px;
-    height: 50px;
+    .card {
+        background: linear-gradient(to right, #C3EEE8, #ffffff);
+        border: 2px solid;
+        border-image: linear-gradient(to right, #259385, #ffffff);
+        border-image-slice: 1;
+    }
+
+    .right {
+        margin-top: 0;
+        margin-left: 5%;
+        margin-bottom: 150px;
+    }
+
+    .footer {
+        margin-top: 900px !important; 
+        width: 100%;
+    }
 }

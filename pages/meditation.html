@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantra</title>
+    <link rel="shortcut icon" type="image/png" href="../images/home/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style-meditation.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../images/home/logo.png" alt="Logo">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/home/logo.png" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarTogglerBtn">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center navbar-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Explore</a>
+                        <a class="nav-link" aria-current="page" href="explore.html">Explore</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="classes.html">Classes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/registration.html">Sign Up</a>
+                        <a class="nav-link" href="registration.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Log In</a>
                     </li>
                 </ul>
+                <button class="btn btn-primary btn-book ms-auto" onclick="window.location.href = 'appointment.html';">Book Now</button>
             </div>
-            <button id="bookBtn" class="btn btn-primary btn-book">Book Now</button>
         </div>
     </nav>
 
@@ -43,70 +48,17 @@
         <p class="yoga-description">This page provides comprehensive insights into various meditation techniques, benefits, and practices, empowering individuals to explore and deepen their understanding of this transformative tool for mental, emotional, and spiritual well-being. Delve into the rich world of meditation to discover its profound effects on stress reduction, focus enhancement, and overall life satisfaction.</p>
     </div>
 
-    <div class="container-meditation">
+    <div class="container-meditation" id="videos-container">
         <div class="contain-meditation">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card custom-card-left">
-                        <div class="card-body">
-                            <h3 class="self-header">Self-love</h3>
-                            <p class="self-text">Self-love Meditation guides individuals through a nurturing practice focused on cultivating compassion, acceptance, and kindness towards oneself, fostering inner healing and emotional well-being.</p>
-                            <button id="selfLoveButton" class="btn btn-primary" onclick="toggleVideo('selfLove')">Watch Video</button>
-                            <button id="closeselfLoveButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('selfLove')">Close Video</button>
-                            <div id="selfLoveContainer"></div>
-                        </div>
-                    </div>
-                    <div class="card custom-card-left">
-                        <div class="card-body">
-                            <h3 class="sleep-header">Sleep</h3>
-                            <p class="sleep-text">Sleep Meditation offers soothing guided practices designed to promote relaxation, ease insomnia, and improve the quality of sleep, helping individuals achieve restorative rest and rejuvenation.</p>
-                            <button id="sleepButton" class="btn btn-primary" onclick="toggleVideo('sleep')">Watch Video</button>
-                            <button id="closeSleepButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('sleep')">Close Video</button>
-                            <div id="sleepContainer"></div>
-                        </div>
-                    </div>
-                    <div class="card custom-card-left">
-                        <div class="card-body">
-                            <h3 class="motivation-header">Motivation</h3>
-                            <p class="motivation-text">Motivation Meditation combines mindfulness techniques with motivational affirmations to inspire and energize individuals, empowering them to pursue their goals with clarity and determination.</p>
-                            <button id="motivationButton" class="btn btn-primary" onclick="toggleVideo('motivation')">Watch Video</button>
-                            <button id="closeMotivationButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('motivation')">Close Video</button>
-                            <div id="motivationContainer"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <img src="../images/home/meditation.png" alt="Image" class="meditation">
+            <div class="row">
+                <div class="col-md-4 left" id="left-column">
+                    <!-- Video content will be dynamically inserted here -->
                 </div>
                 <div class="col-md-4">
-                    <div class="card custom-card-right">
-                        <div class="card-body">
-                            <h3 class="self-header">Overthinking</h3>
-                            <p class="self-text">Overthinking Meditation offers guided practices to help individuals quiet their minds, cultivate present-moment awareness, and break free from the cycle of repetitive thoughts, promoting inner peace and mental clarity.</p>
-                            <button id="overthinkingButton" class="btn btn-primary" onclick="toggleVideo('overthinking')">Watch Video</button>
-                            <button id="closeOverthinkingButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('overthinking')">Close Video</button>
-                            <div id="overthinkingContainer"></div>
-                        </div>
-                    </div>
-                    <div class="card custom-card-right">
-                        <div class="card-body">
-                            <h3 class="sleep-header">Self-Forgiveness</h3>
-                            <p class="sleep-text">Self-Forgiveness Meditation facilitates a healing process by guiding individuals to release self-judgment, cultivate self-compassion, and embrace forgiveness towards themselves.</p>
-                            <button id="selfforgivenessButton" class="btn btn-primary" onclick="toggleVideo('selfforgiveness')">Watch Video</button>
-                            <button id="closeSelfforgivenessButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('selfforgiveness')">Close Video</button>
-                            <div id="selfforgivenessContainer"></div>
-                        </div>
-                    </div>
-                    <div class="card custom-card-right">
-                        <div class="card-body">
-                            <h3 class="motivation-header">Morning Energy</h3>
-                            <p class="motivation-text">Morning Energy Meditation invigorates individuals with uplifting practices designed to awaken the senses, boost vitality, and set a positive tone for the day ahead, enhancing energy levels and promoting mental clarity.</p>
-                            <button id="morningButton" class="btn btn-primary" onclick="toggleVideo('morning')">Watch Video</button>
-                            <button id="closeMorningButton" class="btn btn-secondary" style="display: none;" onclick="closeVideo('morning')">Close Video</button>
-                            <div id="morningContainer"></div>
-                        </div>
-                    </div>
+                    <img src="../images/home/meditation.png" class="meditation">
+                </div>
+                <div class="col-md-4 right" id="right-column" class="right">
+                    <!-- Video content will be dynamically inserted here -->
                 </div>
             </div>
         </div>
@@ -119,19 +71,162 @@
         <div class="footer-menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="pages/explore.html">Explore</a></li>
+                <li><a href="pages/classes.html">Classes</a></li>
+                <li><a href="pages/registration.html">Sign Up</a></li>
+                <li><a href="pages/login.html">Log In</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <a href="#"><img src="../images/home/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/home/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/groups/2485699931753569/"><img src="../images/home/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yoga/"><img src="../images/home/instagram.png" alt="Instagram"></a>
         </div>
     </div>
 
-    <script src="../script.js"></script>
+    <script>
+        function toggleOpenVideo(videoId) {
+            const videoContainer = document.getElementById(videoId + 'Container');
+            const button = document.getElementById(videoId + 'Button');
+            const screenWidth = window.innerWidth;
+
+            if (videoContainer && button) {
+                if (videoContainer.style.display === 'none' || videoContainer.style.display === '') {
+                    videoContainer.innerHTML = '<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>';
+                    videoContainer.style.display = 'block';
+                    videoContainer.style.zIndex = '9999';
+                    button.textContent = 'Close Video';
+
+                    if (screenWidth <= 768) {
+                        videoContainer.style.position = 'fixed';
+                        videoContainer.style.top = '50%';
+                        videoContainer.style.left = '50%';
+                        videoContainer.style.transform = 'translate(-50%, -50%)';
+                        videoContainer.style.width = '70%';
+                        videoContainer.style.height = '70%';
+                    } else {
+                        videoContainer.style.position = 'fixed';
+                        videoContainer.style.top = '20%';
+                        videoContainer.style.left = '28%';
+                        videoContainer.style.width = '560';
+                        videoContainer.style.height = '315';
+                    }
+                } else {
+                    videoContainer.style.display = 'none';
+                    button.textContent = 'Watch Video';
+                }
+
+                const iframe = videoContainer.querySelector('iframe');
+                iframe.addEventListener('playing', function () {
+                    button.textContent = 'Close Video';
+                });
+            } else {
+                console.error('One or more elements not found in the DOM.');
+            }
+        }
+    </script>
+
+    <script>
+        function fetchAndEmbedVideos() {
+            const apiKey = 'AIzaSyAtyStaNDUBAJS25PZXMVRRsQYbOgP_Was';
+            const videoData = [
+                    {
+                        title: 'Motivation',
+                        description: 'Motivation Meditation combines mindfulness techniques with motivational affirmations to inspire and energize individuals, empowering them to pursue their goals with clarity and determination.',
+                        videoId: 'BfUkeJuq4YQ'
+                    },
+                    {
+                        title: 'Self-love',
+                        description: 'Self-love Meditation guides individuals through a nurturing practice focused on cultivating compassion, acceptance, and kindness towards oneself, fostering inner healing and emotional well-being.',
+                        videoId: 'vj0JDwQLof4'
+                    },
+                    {
+                        title: 'Overthinking',
+                        description: 'Overthinking Meditation offers guided practices to help individuals quiet their minds, cultivate present-moment awareness, and break free from the cycle of repetitive thoughts, promoting inner peace.',
+                        videoId: 'eee_akiXk0M'
+                    },
+                    {
+                        title: 'Self-Forgiveness',
+                        description: 'Self-Forgiveness Meditation offers a transformative journey of self-discovery and healing, gently guiding individuals to acknowledge and let go of past regrets, fostering a sense of inner peace and self-acceptance.',
+                        videoId: 'LWGSwfchz_A'
+                    },
+                    {
+                        title: 'Morning Energy',
+                        description: 'Morning Energy Meditation invigorates individuals with uplifting practices designed to awaken the senses, boost vitality, and set a positive tone for the day ahead, enhancing energy levels.',
+                        videoId: 'DaHH--jJBtg'
+                    },
+                    {
+                        title: 'Sleep',
+                        description: 'Self-Forgiveness Meditation offers a transformative journey of self-discovery and healing, gently guiding individuals to acknowledge and let go of past regrets, fostering a sense of inner peace and self-acceptance.',
+                        videoId: 'LWGSwfchz_A'
+                    },
+
+                ];
+
+                const leftColumn = document.getElementById('left-column');
+                const rightColumn = document.getElementById('right-column');
+
+                videoData.forEach((video, index) => {
+                    const containerId = video.videoId + 'Container';
+                    const buttonId = video.videoId + 'Button';
+                    const closeButtonId = 'close' + video.videoId + 'Button';
+
+                    let button = document.getElementById(buttonId);
+                    let closeButton = document.getElementById(closeButtonId);
+
+                    button = document.createElement('button');
+                    button.classList.add('btn', 'btn-primary', 'mr-2', 'btnVideo');
+                    button.textContent = 'Watch Video';
+                    button.id = buttonId;
+                    button.onclick = () => toggleOpenVideo(video.videoId);
+
+                    closeButton = document.createElement('button');
+                    closeButton.classList.add('btn', 'btn-secondary');
+                    closeButton.textContent = 'Close Video';
+                    closeButton.style.display = 'none';
+                    closeButton.id = closeButtonId;
+                    closeButton.onclick = () => toggleOpenVideo(video.videoId);
+
+                    const card = document.createElement('div');
+                    card.classList.add('card', 'mb-3');
+                    const cardBody = document.createElement('div');
+                    cardBody.classList.add('card-body');
+                    const header = document.createElement('h5');
+                    header.classList.add('card-title');
+                    header.textContent = video.title;
+                    header.style.fontFamily = 'Elsie';
+                    header.style.fontSize = '25px';
+                    header.style.fontWeight = '800';
+                    const description = document.createElement('p');
+                    description.textContent = video.description;
+                    description.style.fontFamily = 'Poppins';
+                    description.style.fontSize = '15px';
+                    const iframe = document.createElement('iframe');
+                    iframe.width = '660';
+                    iframe.height = '415';
+                    iframe.src = `https://www.youtube.com/embed/${video.videoId}`;
+                    iframe.frameborder = '0';
+                    iframe.allowfullscreen = true;
+                    iframe.style.display = 'none';
+                    iframe.id = containerId;
+
+                    cardBody.appendChild(header);
+                    cardBody.appendChild(description);
+                    cardBody.appendChild(button);
+                    cardBody.appendChild(closeButton);
+                    cardBody.appendChild(iframe);
+                    card.appendChild(cardBody);
+
+                    if (index % 2 === 0) {
+                        leftColumn.appendChild(card);
+                    } else {
+                        rightColumn.appendChild(card);
+                    }
+                });
+        }
+        fetchAndEmbedVideos();
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>

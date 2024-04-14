@@ -1,23 +1,20 @@
-function toggleMusic(musicSrc, buttonId) {
-    console.log('toggleMusic function called');
+function toggleMusic(src, btnId) {
     var audio = document.getElementById('music');
-    console.log(audio);
-    var button = document.getElementById(buttonId);
+    var btn = document.getElementById(btnId);
     
     if (audio.paused) {
-        audio.src = musicSrc;
+        audio.src = src;
         audio.play();
-        button.textContent = 'Pause Music';
-        button.classList.remove('play');
-        button.classList.add('pause');
+        btn.classList.remove('play');
+        btn.classList.add('pause');
     } else {
         audio.pause();
-        button.textContent = 'Play Music';
-        button.classList.remove('pause');
-        button.classList.add('play');
+        btn.classList.remove('pause');
+        btn.classList.add('play');
     }
 }
 
+//Submitting form on the appointment.html
 function submitForm() {
     var formData = {
         name: document.getElementById("name").value,
@@ -173,19 +170,60 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
+//Script for breath.html
 document.addEventListener('DOMContentLoaded', function() {
     const circle = document.getElementById('circle');
     const square = document.querySelector('.square');
 
-    // Function to handle breathing cycle animation
     function breathe() {
-        circle.style.animationDuration = '10s'; // Set animation duration to match keyframes duration
+        circle.style.animationDuration = '10s';
         setTimeout(() => {
-            circle.style.animationDuration = '5s'; // Set animation duration back to 5s for breathing cycle
-        }, 10000); // After 10s (total animation duration)
+            circle.style.animationDuration = '5s';
+        }, 10000);
     }
 
-    setInterval(breathe, 10000); // Repeat breathing cycle every 10s
+    setInterval(breathe, 10000);
+});
+
+
+//navbar
+var path = window.location.pathname;
+
+var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+navLinks.forEach(function(link) {
+    if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+    }
+});
+
+//Function logout for profile page
+function logout() {
+    window.location.href = '../index.html';
+}
+
+//Navbar while user is logged in
+const userLoggedIn = true;
+const profileNavItem = document.getElementById('profileNavItem');
+const breatheNavItem = document.getElementById('breathNavItem');
+const logoutNavItem = document.getElementById('logoutNavItem');
+if (profileNavItem && breatheNavItem && logoutNavItem) {
+    profileNavItem.style.display = 'block';
+    breatheNavItem.style.display = 'block';
+    logoutNavItem.style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbarTogglerBtn = document.getElementById('navbarTogglerBtn');
+    const navbarCollapse = document.getElementById('navbarNav');
+
+    navbarCollapse.addEventListener('shown.bs.collapse', function () {
+        navbarTogglerBtn.classList.add('collapsed');
+    });
+
+    navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+        navbarTogglerBtn.classList.remove('collapsed');
+    });
 });
 
 

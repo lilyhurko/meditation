@@ -1,80 +1,27 @@
-.bg-light {
-    background-color: white !important;
-}
-
-.navbar-brand {
-    display: flex;
-    padding: 0;
-}
-
-.container {
-    margin: 10px;
-    height: 50px;
-}
-
-.navbar-brand h1 {
-    font-family: "Elsie", sans-serif;
-    font-weight: 400;
-    margin: 0;
-    font-size: 32px;
-    padding: 0;
-    margin-top: 20px;
-    color: #292F36;
-}
-
-.navbar-brand img {
-    width: 100px;
-    height: auto;
-    margin: 0;
-    padding-right: 10px;
-}
-
-.nav-item {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    color: #292F36;
-}
-
-.btn-book {
-    position: absolute;
-    right: 10px;
-    background-color: #c49e85;
-    border-color: #292F36;
-    width: 120px;
-    height: 40px;
-    border-radius: 30px;
-    color: #292F36;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    
-}
-
-.btn-book:hover {
-    background-color: #292F36;
-    border-color: #292F36;
-}
-
 .center-content {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 50px;
     margin-left: 27%;
 }
 
-.container-yoga {
-    margin-bottom: 20px
-}
-
-.container-yoga {
-    margin-top: 30px;
-}
-
 .yoga-head {
     font-family: 'Elsie', sans-serif;
     font-size: 43px;
     color: #292F36;
+}
+
+.yoga-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #292F36;
+}
+
+.container-yoga {
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .contain-yoga {
@@ -94,31 +41,18 @@
     margin-top: 7px;
 }
 
-.yoga-header,
-.meditation-header {
+.yoga-header {
     margin-top: 0;
     font-family: 'Elsie', sans-serif;
     font-weight: 800;
     font-size: 22px;
 }
 
-.yoga-text,
-.meditation-text {
+.yoga-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 15px;
     width: 450px;
-}
-
-.card-body-yoga {
-    margin-top: 7px;
-    text-align: end;
-}
-
-.instructor {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
 }
 
 .time-header {
@@ -137,12 +71,6 @@
     width: 30px;
     height: 40px;
     margin-left: 5px;
-}
-
-.prenatal-yoga {
-    width: 150px;
-    height: 300px;
-    margin-right: 50px;
 }
 
 .prenatal {
@@ -191,6 +119,12 @@
     border-color: #259385;
 }
 
+.btn-primary {
+    --bs-btn-active-bg: #292F36;
+    --bs-btn-active-border-color: #292F36;
+    --bs-btn-active-color: #fff;
+}
+
 .therapy-yoga {
     width: 150px;
     height: 300px;
@@ -198,45 +132,69 @@
     border-radius: 30%;
 }
 
-.footer {
-    background-image: url('../images/home/bg-footer.jpg');
-    background-size: cover;
-    height: 35vh;
-    padding: 20px;
-    text-align: center;
-    margin-top: 4%;
-}
+@media screen and (max-width: 768px) {
+    .center-content {
+        width: 70%;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
-.footer-logo img {
-    width: 100px;
-    margin-top: 50px;
-}
+    .yoga-head {
+        font-size: 30px;
+    }
 
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-}
+    .yoga-description {
+        font-size: 14px;
+    }
 
-.footer-menu li {
-    display: inline-block;
-    margin: 0 10px;
-}
+    .container-yoga {
+        margin-top: 10px;
+    }
 
-.footer-menu a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-}
+    .contain-yoga {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.footer-social {
-    margin-top: 20px;
-}
+    .custom-card-yoga {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.footer-social a {
-    margin: 0 10px;
-}
+    .yoga-header {
+        font-size: 20px;
+    }
 
-.footer-social img {
-    width: 50px;
-    height: 50px;
+    .yoga-text,
+    .time-text,
+    .name-text {
+        font-size: 14px;
+    }
+
+    .time-header {
+        font-size: 16px;
+    }
+
+    .calendar-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .instructor-icon {
+        width: 25px;
+        height: 35px;
+    }
+
+    .therapy-yoga {
+        width: 150px;
+        height: 250px;
+        margin-right: 10px;
+        margin-top: -250px;
+    }
+
+    .btn-appointment {
+        margin-top: 10px;
+    }
 }

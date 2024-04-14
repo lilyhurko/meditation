@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantra</title>
+    <link rel="shortcut icon" type="image/png" href="../images/home/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style-home.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="images/home/logo.png" alt="Logo">
+                <img src="images/home/logo.png" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarTogglerBtn">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center navbar-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/explore.html">Explore</a>
+                        <a class="nav-link" aria-current="page" href="pages/explore.html">Explore</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pages/classes.html">Classes</a>
@@ -36,8 +38,8 @@
                         <a class="nav-link" href="pages/login.html">Log In</a>
                     </li>
                 </ul>
+                <button class="btn btn-primary btn-book ms-auto" onclick="window.location.href = '../pages/appointment.html';">Book Now</button>
             </div>
-            <button id="bookBtn" class="btn btn-primary btn-book" onclick="window.location.href = 'pages/appointment.html';">Book Now</button>
         </div>
     </nav>
 
@@ -52,8 +54,9 @@
                         <div class="text-small-container">
                             <p class="text-small">Purge toxins and rejuvenate your body with our meditation program. Experience the transformative benefits of mindfulness, enhancing both physical and mental well-being.</p>
                         </div>
+                        <button id="bookBtn" class="btn btn-primary btn-start" onclick="window.location.href = '../pages/appointment.html';">Get Start</button>
                         <div class="image-carousel1">
-                            <img src="images/home/carousel1.png" alt="Description of the image" class="carousel1">
+                            <img src="../images/home/carousel1.png" alt="Description of the image" class="carousel1">
                         </div>
                     </div>
                 </div>
@@ -67,8 +70,9 @@
                         <div class="text-small-container">
                             <p class="text-small">Meditation enhances both mental and physical wellness, offering profound benefits for the mind and body. Through regular practice, individuals can experience improved focus, reduced stress levels, and enhanced overall well-being.</p>
                         </div>
+                        <button id="bookBtn" class="btn btn-primary btn-start" onclick="window.location.href = 'appointment.html';">Get Start</button>
                         <div class="image-carousel1">
-                            <img src="images/home/carousel1.png" alt="Description of the image" class="carousel1">
+                            <img src="../images/home/carousel1.png" alt="Description of the image" class="carousel1">
                         </div>
                     </div>
                 </div>
@@ -82,8 +86,9 @@
                         <div class="text-small-container">
                             <p class="text-small">Meditation serves as a practice that cultivates balance within the mind and body, fostering a sense of harmony and alignment. By facilitating inner peace and tranquility, it promotes overall well-being and a harmonious existence.</p>
                         </div>
+                        <button id="bookBtn" class="btn btn-primary btn-start" onclick="window.location.href = 'appointment.html';">Get Start</button>
                         <div class="image-carousel1">
-                            <img src="images/home/carousel1.png" alt="Description of the image" class="carousel1">
+                            <img src="../images/home/carousel1.png" alt="Description of the image" class="carousel1">
                         </div>
                     </div>
                 </div>
@@ -181,7 +186,6 @@
             </div>
         </div>
     </div>
-    
     <div class="container-breath">
         <div class="breath-header">
             <h2 class="breath-head">Take a Deep Breath</h2>
@@ -189,6 +193,7 @@
         <div class="breath-text">
             <p class="breath-description">Indulge in relaxation and renewal as you explore the transformative power of deep breathing techniques on our platform. Discover serenity and inner peace through mindfulness practices designed to alleviate stress and promote well-being.</p>
         </div>
+    
         <div class="contain-breath">
             <div class="row">
                 <div class="col-md-6">
@@ -198,7 +203,7 @@
                                 <div class="card-body">
                                     <h3 class="wind-header">Turning off Auto Pilot</h3>
                                     <p class="wind-text">Introduction, Stress Assessment</p>
-                                    <button id="btnAutoPilot" class="btn btn-primary btn-breath play" onclick="toggleMusic('music/AutoPilot.mp3', 'btnAutoPilot')">Play Music</button>
+                                    <button id="btnAutoPilot" class="btn btn-breath play" onclick="toggleMusic('music/AutoPilot.mp3', 'btnAutoPilot')"></button>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +212,7 @@
                                 <div class="card-body">
                                     <h3 class="stress-header">Crazy Wind Sound</h3>
                                     <p class="stress-text">Relax Your Mind</p>
-                                    <button id="btnRain" class="btn btn-primary btn-breath play" onclick="toggleMusic('music/Rain.mp3', 'btnRain')">Play Music</button>
+                                    <button id="btnRain" class="btn btn-breath play" onclick="toggleMusic('music/Rain.mp3', 'btnRain')"></button>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +221,7 @@
                                 <div class="card-body">
                                     <h3 class="self-header">Mental Wellness</h3>
                                     <p class="self-text">Stress Relief</p>
-                                    <button id="btnWellness" class="btn btn-primary btn-breath play" onclick="toggleMusic('music/Wellness.mp3', 'btnWellness')">Play Music</button>
+                                    <button id="btnWellness" class="btn btn-breath play" onclick="toggleMusic('music/Wellness.mp3', 'btnWellness')"></button>
                                 </div>
                             </div>
                         </div>
@@ -232,6 +237,8 @@
             </div>
         </div>
     </div>
+    
+    
 
     <div class="container-meditation">
         <div class="meditation-header">
@@ -246,7 +253,7 @@
                     <div class="card custom-card-left">
                         <div class="card-body">
                             <h3 class="wind-header">The Peace</h3>
-                            <p class="wind-text">The Peace invites you to step into its serene sanctuary, where every moment beckons you to embark on a transformative journey towards inner calm and mindfulness.</p>
+                            <p class="wind-text">The Peace invites you to step into its serene sanctuary, where every moment beckons you to embark on a transformative journey towards inner calm.</p>
                         </div>
                     </div>
                     <div class="card custom-card-left">
@@ -289,7 +296,7 @@
         </div>
     </div>
 
-    <div class="container-transform">
+    <div class="container-transform" id="videos-container">
         <div class="transform-header">
             <h2 class="transform-head">Transform Your Body, Mind and Life Today</h2>
         </div>
@@ -301,27 +308,17 @@
                 <div class="col-md-6">
                     <img src="images/home/transform-left.jpg" alt="Image" class="transform-left">
                 </div>
-                <div class="col-md-6 transform right">
-                    <h3 class="wind-header">Antistress Yoga</h3>
-                    <p class="wind-text">Antistress Yoga offers a tranquil refuge from life's pressures, guiding you through soothing practices to release tension, cultivate inner peace, and restore balance to mind and body.</p>
-                    <p class="wind-text">Immerse yourself in gentle guidance and calming techniques, allowing you to unwind, recharge, and find respite from the stresses of daily life.</p>
-                    <button id="antistressButton" class="btn btn-antistress" onclick="toggleVideo('antistress')">Watch Video</button>
-                    <button id="closeantistressButton" class="btn btn-antistress" style="display: none;" onclick="closeVideo('antistress')">Close Video</button>
-                    <div id="antistressContainer"></div>
+                <div class="col-md-6 transform right" id="right-column">
+                    <!-- Video cards -->
                 </div>
-                <div class="col-md-6 transform left">
-                    <h3 class="wind-header">Beginner Yoga</h3>
-                    <p class="wind-text">Beginner Yoga welcomes newcomers to the practice with accessible postures, gentle movements, and emphasis on proper alignment, providing a supportive environment for individuals to build strength, flexibility, and confidence on their yoga journey.</p>
-                    <p class="wind-text">Whether you're new to yoga or seeking a gentle reintroduction, this class offers foundational teachings and guidance to help you cultivate a sustainable and fulfilling practice.</p>
-                    <button id="beginnerButton" class="btn btn-beginner" onclick="toggleVideo('beginner')">Watch Video</button>
-                    <button id="beginnerButton" class="btn btn-beginner" style="display: none;" onclick="closeVideo('beginner')">Close Video</button>
-                    <div id="beginnerContainer"></div>
+                <div class="col-md-6 transform left" id="left-column">
+                    <!-- Video cards -->
                 </div>
                 <div class="col-md-6">
                     <img src="images/home/transform-right.jpg" alt="Image" class="transform-right">
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
 
     <div class="footer">
@@ -331,15 +328,144 @@
         <div class="footer-menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Classes</a></li>
+                <li><a href="pages/explore.html">Explore</a></li>
+                <li><a href="pages/classes.html">Classes</a></li>
+                <li><a href="pages/registration.html">Sign Up</a></li>
+                <li><a href="pages/login.html">Log In</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <a href="#"><img src="../images/home/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/home/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/groups/2485699931753569/"><img src="../images/home/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yoga/"><img src="../images/home/instagram.png" alt="Instagram"></a>
         </div>
     </div>
+
+    <script>
+        function toggleOpenVideo(videoId) {
+            const videoContainer = document.getElementById(videoId + 'Container');
+            const button = document.getElementById(videoId + 'Button');
+            const screenWidth = window.innerWidth;
+
+            if (videoContainer && button) {
+                if (videoContainer.style.display === 'none' || videoContainer.style.display === '') {
+                    videoContainer.innerHTML = '<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>';
+                    videoContainer.style.display = 'block';
+                    videoContainer.style.zIndex = '9999';
+                    button.textContent = 'Close Video';
+
+                    if (screenWidth <= 768) {
+                        videoContainer.style.position = 'fixed';
+                        videoContainer.style.top = '50%';
+                        videoContainer.style.left = '50%';
+                        videoContainer.style.transform = 'translate(-50%, -50%)';
+                        videoContainer.style.width = '70%';
+                        videoContainer.style.height = '70%';
+                    } else {
+                        videoContainer.style.position = 'fixed';
+                        videoContainer.style.top = '20%';
+                        videoContainer.style.left = '28%';
+                        videoContainer.style.width = '560';
+                        videoContainer.style.height = '315';
+                    }
+                } else {
+                    videoContainer.style.display = 'none';
+                    button.textContent = 'Watch Video';
+                }
+
+                const iframe = videoContainer.querySelector('iframe');
+                iframe.addEventListener('playing', function () {
+                    button.textContent = 'Close Video';
+                });
+            } else {
+                console.error('One or more elements not found in the DOM.');
+            }
+        }
+    </script>
+    
+    <script>
+        function fetchAndEmbedVideos() {
+            const apiKey = 'AIzaSyAtyStaNDUBAJS25PZXMVRRsQYbOgP_Was';
+            const videoData = [
+                {
+                    title: 'Beginner Yoga',
+                    description: 'Beginner Yoga welcomes newcomers to the practice with accessible postures, gentle movements, and emphasis on proper alignment, providing a supportive environment for individuals to build strength, flexibility, and confidence on their yoga journey. Whether you`re new to yoga or seeking a gentle reintroduction, this class offers foundational teachings and guidance to help you cultivate a sustainable and fulfilling practice.',
+                    videoId: 'j7rKKpwdXNE'
+                },
+                {
+                    title: 'Antistress Yoga',
+                    description: 'Antistress Yoga offers a tranquil refuge from life`s pressures, guiding you through soothing practices to release tension, cultivate inner peace, and restore balance to mind and body. Immerse yourself in gentle guidance and calming techniques, allowing you to unwind, recharge, and find respite from the stresses of daily life.',
+                    videoId: '8TuRYV71Rgo'
+                }
+            ];
+
+            const leftColumn = document.getElementById('left-column');
+            const rightColumn = document.getElementById('right-column');
+
+            videoData.forEach((video, index) => {
+                const containerId = video.videoId + 'Container';
+                const buttonId = video.videoId + 'Button';
+                const closeButtonId = 'close' + video.videoId + 'Button';
+
+                let button = document.getElementById(buttonId);
+                let closeButton = document.getElementById(closeButtonId);
+
+                if (!button) {
+                    button = document.createElement('button');
+                    button.classList.add('btn', 'btn-primary', 'mr-2', 'btnVideo');
+                    button.textContent = 'Watch Video';
+                    button.id = buttonId;
+                    button.onclick = () => toggleOpenVideo(video.videoId);
+                }
+
+                if (!closeButton) {
+                    closeButton = document.createElement('button');
+                    closeButton.classList.add('btn', 'btn-secondary');
+                    closeButton.textContent = 'Close Video';
+                    closeButton.style.display = 'none';
+                    closeButton.id = closeButtonId;
+                    closeButton.onclick = () => toggleOpenVideo(video.videoId);
+                }
+
+                const card = document.createElement('div');
+                card.classList.add('card', 'mb-3');
+                const cardBody = document.createElement('div');
+                cardBody.classList.add('card-body');
+                const header = document.createElement('h5');
+                header.classList.add('card-title');
+                header.textContent = video.title;
+                header.style.fontFamily = 'Elsie';
+                header.style.fontSize = '25px';
+                header.style.fontWeight = '800';
+                const description = document.createElement('p');
+                description.classList.add('videoDescription')
+                description.textContent = video.description;
+                description.style.fontFamily = 'Poppins';
+                description.style.fontSize = '15px';
+                const iframe = document.createElement('iframe');
+                iframe.width = '660';
+                iframe.height = '415';
+                iframe.src = `https://www.youtube.com/embed/${video.videoId}`;
+                iframe.frameborder = '0';
+                iframe.allowfullscreen = true;
+                iframe.style.display = 'none';
+                iframe.id = containerId;
+
+                cardBody.appendChild(header);
+                cardBody.appendChild(description);
+                cardBody.appendChild(button);
+                cardBody.appendChild(closeButton);
+                cardBody.appendChild(iframe);
+                card.appendChild(cardBody);
+
+                if (index % 2 === 0) {
+                    leftColumn.appendChild(card);
+                } else {
+                    rightColumn.appendChild(card);
+                }
+            });
+        }
+        fetchAndEmbedVideos();
+    </script>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

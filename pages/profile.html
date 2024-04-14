@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mantra</title>
+    <link rel="shortcut icon" type="image/png" href="../images/home/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style-profile.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="../images/home/logo.png" alt="Logo">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/home/logo.png" alt="Logo" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarTogglerBtn">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center navbar-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="explore.html">Explore</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="classes.html">Classes</a>
+                    </li>
+                    <li class="nav-item" id="profileNavItem" style="display: none;">
+                        <a class="nav-link active" href="#">Profile</a>
                     </li>
                     <li class="nav-item" id="breathNavItem" style="display: none;">
                         <a class="nav-link" href="breath.html">Breath</a>
@@ -36,8 +41,8 @@
                         <a class="nav-link" href="#" onclick="logout()">Logout</a>
                     </li>
                 </ul>
+                <button class="btn btn-primary btn-book ms-auto" onclick="window.location.href = '../pages/appointment.html';">Book Now</button>
             </div>
-            <button id="bookBtn" class="btn btn-primary btn-book" onclick="window.location.href = 'pages/appointment.html';">Book Now</button>
         </div>
     </nav>
 
@@ -103,16 +108,16 @@
         </div>
         <div class="footer-menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="registration.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <a href="#"><img src="../images/home/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/home/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/groups/2485699931753569/"><img src="../images/home/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/yoga/"><img src="../images/home/instagram.png" alt="Instagram"></a>
         </div>
     </div>
 
@@ -132,9 +137,11 @@
             `;
             profileInfo.innerHTML = profileHTML;
 
+            const profileNavItem = document.getElementById('profileNavItem');
             const breatheNavItem = document.getElementById('breathNavItem');
             const logoutNavItem = document.getElementById('logoutNavItem');
-            if (breatheNavItem && logoutNavItem) {
+            if (profileNavItem && breathNavItem && logoutNavItem) {
+                profileNavItem.style.display = 'block';
                 breatheNavItem.style.display = 'block';
                 logoutNavItem.style.display = 'block';
             }
@@ -143,12 +150,10 @@
         function logout() {
             window.location.href = '../index.html';
         }
-
-        const userLoggedIn = true; // You can change this based on your login state
-        const breathNavItem = document.getElementById('breathNavItem');
-        if (userLoggedIn && breathNavItem) {
-            breathNavItem.style.display = 'block';
-        }
     </script>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
