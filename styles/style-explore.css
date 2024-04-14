@@ -58,12 +58,6 @@
     margin-top: 50px;
 }
 
-.btn-primary {
-    --bs-btn-active-bg: #fff;
-    --bs-btn-active-border-color: #fff;
-    --bs-btn-active-color: #259385;
-}
-
 .btn-start {
     width: 180px;
     height: 50px;

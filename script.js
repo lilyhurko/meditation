@@ -25,7 +25,7 @@ function submitForm() {
         class: document.getElementById("class").value
     };
 
-    fetch('https://formspree.io/f/mrgnalzn', {
+    fetch('https://formspree.io/f/xwkgwyan', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -86,6 +86,7 @@ function closeVideo(videoType) {
     closeButton.style.display = 'none';
 }
 
+//Submitting form register
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('registerForm').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -149,6 +150,7 @@ localStorage.setItem('formData', JSON.stringify(formData));
 window.location.href = 'login.html';
 }
 
+//Submitting form login
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -213,6 +215,7 @@ if (profileNavItem && breatheNavItem && logoutNavItem) {
     logoutNavItem.style.display = 'block';
 }
 
+//Collapsed menu
 document.addEventListener('DOMContentLoaded', function () {
     const navbarTogglerBtn = document.getElementById('navbarTogglerBtn');
     const navbarCollapse = document.getElementById('navbarNav');
