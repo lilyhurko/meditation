@@ -57,7 +57,7 @@
                 <div class="col-md-6">   
                     <div class="card custom-card-yoga">
                         <div class="card-body">
-                            <div id="profileInfo">
+                            <div id="profileInfo" class="info">
                                 <div class="profile-detail">
                                     <strong>Name:</strong> <span id="name"></span>
                                 </div>
@@ -80,10 +80,70 @@
                                     <strong>Interests:</strong> <span id="interests"></span>
                                 </div>
                             </div>
+                            <!-- Edit Profile Form -->
+                            <form id="editProfileForm" style="display: none;">
+                                <div class="form-group">
+                                    <label for="editName" class="form-label">Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="editName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editSurname" class="form-label">Surname</label>
+                                    <input type="text" class="form-control form-control-sm" id="editSurname">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Sex</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="editSex" id="male" value="male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="editSex" id="female" value="female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editAge" class="form-label">Age</label>
+                                    <input type="number" class="form-control form-control-sm" id="editAge">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control form-control-sm" id="editEmail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editRole" class="form-label">Role</label>
+                                    <select class="form-select form-select-sm" id="editRole">
+                                        <option value="student">Student</option>
+                                        <option value="officer">Officer</option>
+                                        <option value="teacher">Teacher</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editInterests" class="form-label">Interests</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="interest1" value="yoga">
+                                        <label class="form-check-label" for="yoga-interest">Yoga</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="interest2" value="meditation">
+                                        <label class="form-check-label" for="meditation-interest">Meditation</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="interest3" value="relax">
+                                        <label class="form-check-label" for="relax-interest">Relax</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+                            </form>
                         </div>
                     </div>
-                                   
+                    <button class="btn btn-primary btn-edit" id="editProfileBtn">Edit Profile</button>
+                    <button type="button" class="btn btn-danger btn-delete" id="deleteProfileBtn">Delete Profile</button>
                 </div>
+
                 
                 <div id="carouselImages2" class="carousel slide custom-carousel" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -123,7 +183,7 @@
 
     <script>
         const storedData = JSON.parse(localStorage.getItem('formData'));
-
+    
         if (storedData) {
             const profileInfo = document.getElementById('profileInfo');
             const profileHTML = `
@@ -136,21 +196,99 @@
                 <p><strong>Interests:</strong> ${storedData.interests.join(', ')}</p>
             `;
             profileInfo.innerHTML = profileHTML;
-
+    
             const profileNavItem = document.getElementById('profileNavItem');
-            const breatheNavItem = document.getElementById('breathNavItem');
+            const breathNavItem = document.getElementById('breathNavItem');
             const logoutNavItem = document.getElementById('logoutNavItem');
             if (profileNavItem && breathNavItem && logoutNavItem) {
                 profileNavItem.style.display = 'block';
-                breatheNavItem.style.display = 'block';
+                breathNavItem.style.display = 'block';
                 logoutNavItem.style.display = 'block';
             }
         }
-
+    
         function logout() {
             window.location.href = '../index.html';
         }
+    
+        document.getElementById('editProfileBtn').addEventListener('click', function() {
+            document.getElementById('profileInfo').style.display = 'none';
+            document.getElementById('editProfileForm').style.display = 'block';
+
+            document.getElementById('editName').value = storedData.name;
+            document.getElementById('editSurname').value = storedData.surname;
+            document.getElementById('editAge').value = storedData.age;
+            document.getElementById('editEmail').value = storedData.email;
+            document.getElementById('editRole').value = storedData.role;
+    
+            const sexRadioButtons = document.getElementsByName('editSex');
+            sexRadioButtons.forEach(btn => {
+                if (btn.value === storedData.sex) {
+                    btn.checked = true;
+                }
+            });
+    
+            const interestsCheckboxes = document.querySelectorAll('[id^="interest"]');
+            storedData.interests.forEach(interest => {
+                interestsCheckboxes.forEach(checkbox => {
+                    if (checkbox.value === interest) {
+                        checkbox.checked = true;
+                    }
+                });
+            });
+        });
+    
+        document.getElementById('editProfileForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Update stored data
+            storedData.name = document.getElementById('editName').value;
+            storedData.surname = document.getElementById('editSurname').value;
+            storedData.sex = document.querySelector('input[name="editSex"]:checked').value;
+            storedData.age = document.getElementById('editAge').value;
+            storedData.email = document.getElementById('editEmail').value;
+            storedData.role = document.getElementById('editRole').value;
+            storedData.password = document.getElementById('password').value;
+
+            const interestsCheckboxes = document.querySelectorAll('[id^="interest"]');
+            storedData.interests = [];
+            interestsCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    storedData.interests.push(checkbox.value);
+                }
+            });
+
+            const profileInfo = document.getElementById('profileInfo');
+            profileInfo.innerHTML = `
+                <p><strong>Name:</strong> ${storedData.name}</p>
+                <p><strong>Surname:</strong> ${storedData.surname}</p>
+                <p><strong>Sex:</strong> ${storedData.sex}</p>
+                <p><strong>Age:</strong> ${storedData.age}</p>
+                <p><strong>Email:</strong> ${storedData.email}</p>
+                <p><strong>Role:</strong> ${storedData.role}</p>
+                <p><strong>Password:</strong> Updated</p> <!-- Show that password is updated -->
+                <p><strong>Interests:</strong> ${storedData.interests.join(', ')}</p>
+            `;
+
+            document.getElementById('carouselImages2').style.display = 'block';
+
+            document.getElementById('profileInfo').style.display = 'block';
+            document.getElementById('editProfileForm').style.display = 'none';
+
+            localStorage.setItem('formData', JSON.stringify(storedData));
+        });
+
+        function deleteProfile() {
+            const confirmation = confirm("Are you sure you want to delete your profile? This action cannot be undone.");
+            if (confirmation) {
+                localStorage.removeItem('formData');
+                window.location.href = '../index.html';
+            }
+        }
+
+        document.getElementById('deleteProfileBtn').addEventListener('click', deleteProfile);
     </script>
+    
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

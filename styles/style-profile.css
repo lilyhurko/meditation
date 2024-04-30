@@ -30,21 +30,20 @@
 
 .custom-card-yoga {
     width: 700px;
-    height: 270px;
+    height: 560px;
     position: relative;
     overflow: hidden;
-    margin-top: 130px;
     background-color: #C3EEE8;
 }
 
-.card-body {
-    margin-top: 7px;
+.info {
+    margin-top: 90px;
 }
 
 #profileInfo p {
     margin-bottom: 10px; 
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .profile-detail {
@@ -123,6 +122,21 @@
 .footer-social img {
     width: 50px;
     height: 50px;
+}
+
+.btn-sm,
+.btn-edit,
+.btn-delete {
+    background-color: #259385;
+    border-color: #259385;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-sm:hover,
+.btn-edit:hover,
+.btn-delete {
+    background-color: #259385;
+    border-color: #259385;
 }
 
 @media screen and (max-width: 768px) {
